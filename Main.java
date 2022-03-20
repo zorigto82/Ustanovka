@@ -19,21 +19,21 @@ public class Main {
         File file3 = new File("C://Games//res//vectors");
         File file4 = new File("C://Games//res//icons");
 
-//        if (file4.mkdir()){
-//            System.out.println("Подкаталог создан");
-//        }
+        if (file4.mkdir()){
+            System.out.println("Каталог создан");
+        }
 
         File myFile = new File("C://Games//src//main//Main.java");
         File myFile1 = new File("C://Games//src//main//Utils.java");
-        File myFile2 = new File("C://Games//temp//temp.java");
+        File myFile2 = new File("C://Games//temp//temp.txt");
 
-//        try {
-//            if (myFile2.createNewFile()) {
-//                System.out.println("Файл был создан");
-//            }
-//        } catch (IOException ex) {
-//            System.out.println(ex.getMessage());
-//        }
+        try {
+            if (myFile2.createNewFile()) {
+                System.out.println("Файл был создан");
+            }
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
 
         sb.append(dir);
         sb.append(dir1);
@@ -50,13 +50,13 @@ public class Main {
 
         String text = sb.toString();
 
-//        try (FileWriter writer = new FileWriter("C://Games//temp//temp.txt", false)) {
-//            writer.write(text);
-//            writer.append('\n');
-//            writer.flush();
-//        }catch (IOException ex){
-//            System.out.println(ex.getMessage());
-//        }
+        try (FileWriter writer = new FileWriter("C://Games//temp//temp.txt", false)) {
+            writer.write(text);
+            writer.append('\n');
+            writer.flush();
+        }catch (IOException ex){
+            System.out.println(ex.getMessage());
+        }
 
         try (FileReader reader = new FileReader("C://Games//temp//temp.txt")) {
             int i;
